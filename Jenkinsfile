@@ -17,6 +17,11 @@ pipeline {
                 sh 'terraform apply'
             }
         }
+        stage('Terraform destroy') {
+            steps {
+                sh 'terraform destroy'
+            }
+        }
         
     }
 }
